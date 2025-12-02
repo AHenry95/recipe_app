@@ -1,0 +1,26 @@
+# Text backup files
+*.bak
+
+# Database
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual environment
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Django
+*.log
+media/
+
+# macOS
+.DS_Store
