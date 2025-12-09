@@ -8,6 +8,7 @@ class Recipe(models.Model):
     cooking_time = models.IntegerField(help_text='In minutes')
     difficulty = models.CharField(max_length=20, blank=True)
     instructions = models.TextField()
+    pic = models.ImageField(upload_to='recipes', default='no_picture.jpg')
 
     def set_difficulty(self):
         ingredient_count = len(self.ingredients.split(','))
