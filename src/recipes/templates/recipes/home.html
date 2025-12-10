@@ -1,107 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe App</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Oxygen, sans-serif;
-            background: linear-gradient(135deg, #e8f5e9 0%, #fff8e1 100%);
-            color: #2d3436;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        header {
-            background-color: #2d6a4f;
-            color: white;
-            padding: 2.5rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        main {
-            flex: 1;
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 1rem;
-        }
-
-        .welcome-section {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            text-align: center;
-        }
-
-        .welcome-section h2 {
-            color: #2d6a4f;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .welcome-section p {
-            color: #555;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .construction-notice {
-            background-color: #fff3cd;
-            border: 1px solid #e0c36a;
-            padding: 1.5rem 2rem;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .construction-notice h3 {
-            color: #856404;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem
-        }
-
-        .construction-notice p {
-            color: #856404;
-            font-size: 1rem;
-        }
-        footer {
-            background-color: #2d6a4f;
-            color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
 </head>
 
 <body>
     <header>
         <h1>Recipe App</h1>
-        <p>Your personal collection of delicious recipes</p>
+        <p>Your personal collection of delcious recipes</p>
     </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/list">All Recipes</a>
+    </nav>
 
     <main>
         <section class="welcome-section">
@@ -110,11 +26,34 @@
                 Whether you're a seasoned chef or just getting started, this is your place to discover, 
                 save, and share recipes that bring joy to your table.
             </p>
+            <a href="/list" class="main-button">🍳 Browse All Recipes</a>
         </section>
 
-        <section class="construction-notice">
-            <h3>Under Construction</h3>
-            <p>We're still cooking up this project's features. Check back soon for more!</p>
+         <section class="featured-section">
+            <h2 class="section-heading">Our Recipes:</h2>
+            
+            {% if recipes %}
+            <div class="recipes-grid">
+                {% for recipe in recipes %}
+                <a href="/list/{{ recipe.pk }}" class="recipe-card">
+                    <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-image">
+                    <div class="recipe-info">
+                        <h3 class="recipe-name">{{ recipe.name }}</h3>
+                        <div class="recipe-meta">
+                            <span>⏱ {{ recipe.cooking_time }} min</span>
+                            <span class="difficulty-badge difficulty-{{ recipe.difficulty|lower }}">
+                                {{ recipe.difficulty }}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-state">
+                <p>No recipes yet. Add some recipes through the admin panel!</p>
+            </div>
+            {% endif %}
         </section>
     </main>
 

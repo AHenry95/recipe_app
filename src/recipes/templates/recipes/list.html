@@ -1,0 +1,52 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
+</head>
+
+<body>
+   <header>
+        <h1>Recipe App</h1>
+        <p>Your personal collection of delcious recipes</p>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/list">All Recipes</a>
+    </nav>
+
+    <main>
+        <h2 class="page-title">All Recipes</h2>
+
+        {% if recipes %}
+        <div class="recipes-grid">
+            {% for recipe in recipes %}
+                <a href="{{recipe.get_absolute_url}}" class="recipe-card">
+                    <img src="{{recipe.pic.url}}" alt="{{recipe.name}}" class="recipe-image">
+                    <div class="recipe-info">
+                        <h3 class="recipe-name">{{recipe.name}}</h3>
+                        <div class="recipe-meta">
+                            <span>⏱ {{ recipe.cooking_time }} min</span>
+                            <span class="difficulty-badge difficulty-{{ recipe.difficulty|lower }}">
+                                {{ recipe.difficulty }}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+
+        {% else %}
+        <div>No recipes added yet</div>
+    {% endif %}
+    </main>
+
+    <footer>
+        <p>Recipe App 2025</p>
+    </footer>
+</body>
+</html>
