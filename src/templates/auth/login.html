@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Recipe App</title>
+    <link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+
+            {% if request.GET.next %}
+                <div class="redirect-message">
+                    <p>Please log in to access the requested page</p>
+                </div>
+            {% endif %}
+            
+            <div class="login-header">
+                <h1>Welcome Back!</h1>
+                <p>Sign in to access your recipes</p>
+            </div>
+
+            {% if error_message %}
+                <div class="error-message">
+                    {{error_message}}
+                </div>
+            {% endif %}
+
+            <form action="" method="POST" class="login-form">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="login-button">Sign In</button>
+            </form>
+
+            <div class="login-footer">
+                <a href="{% url 'recipes:home' %}">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
