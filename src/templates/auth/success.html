@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out | Recipe App</title>
+    <link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-card">
+            <div class="success-icon">👋</div>
+            <h1>You have successfully logged out!</h1>
+            <p>
+                Thank you for using the Recipe App! 
+                Your recipes will be where for you whenever you're ready to cook up something delicious! 
+            </p>
+
+            <div class="success-actions">
+                <a href="{% url 'login' %}" class="success-button">Log Back In</a>
+                <a href="/" class="success-link">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
