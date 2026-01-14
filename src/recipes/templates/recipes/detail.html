@@ -1,69 +1,42 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{recipe.name}}</title>
-    <link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
-</head>
+{% extends 'recipes/base.html' %}
 
-<body>
-    <header>
-        <h1>Recipe App</h1>
-        <p>Your personal collection of delcious recipes</p>
-    </header>
+{% block title %}{{recipe.name}}{% endblock %}
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/list">All Recipes</a>
-        {% if user.is_authenticated %}
-            <span class="nav-greeting">Hello {{ user.username }}!</span>
-            <a href="{% url 'logout' %}">Logout</a>
-        {% else %}
-            <a href="{% url 'login' %}">Login</a>
-        {% endif %}
-    </nav>
+{% block content %}
+<main>
+    <a href="{% url 'recipes:list' %}" class="back-link">Back to Recipe List</a>
 
-    <main>
-        <a href="{% url 'recipes:list' %}" class="back-link">Back to Recipe List</a>
-
-        <div class="recipe-detail">
-            <div class="recipe-hero">
-                <img src="{{recipe.pic.url}}" alt="{{recipe.name}}">
-            </div>
-
-            <div class="recipe-content">
-
-                <div class="recipe-header">
-                    <h1 class="recipe-title">{{recipe.name}}</h1>
-                    <div class="recipe-badges">
-                        <span class="badge">⏱ {{recipe.cooking_time}} minutes</span>
-                        <span class="difficulty-badge difficulty-{{recipe.difficulty|lower}}">
-                            {{recipe.difficulty}}
-                        </span>
-                    </div>
-                </div>
-                
-                <section class="recipe-section">
-                    <h2 class="section-title">Ingredients</h2>
-                    <ul class="ingredients-list">
-                        {% for ingredient in recipe.get_ingredients_list %}
-                        <li>{{ingredient}}</li>
-                        {% endfor %}
-                    </ul>
-                </section>
-
-                <section class="recipe-section">
-                    <h2 class="section-title">Instructions</h2>
-                    <p class="instructions-text">{{recipe.instructions}}</p>
-                </section>
-            </div>
+    <div class="recipe-detail">
+        <div class="recipe-hero">
+            <img src="{{recipe.pic.url}}" alt="{{recipe.name}}">
         </div>
-    </main>
 
-    <footer>
-        <p>Recipe App 2025</p>
-    </footer>
-</body>
-</html>
+        <div class="recipe-content">
+
+            <div class="recipe-header">
+                <h1 class="recipe-title">{{recipe.name}}</h1>
+                <div class="recipe-badges">
+                    <span class="badge">⏱ {{recipe.cooking_time}} minutes</span>
+                    <span class="difficulty-badge difficulty-{{recipe.difficulty|lower}}">
+                        {{recipe.difficulty}}
+                    </span>
+                </div>
+            </div>
+            
+            <section class="recipe-section">
+                <h2 class="section-title">Ingredients</h2>
+                <ul class="ingredients-list">
+                    {% for ingredient in recipe.get_ingredients_list %}
+                    <li>{{ingredient}}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="recipe-section">
+                <h2 class="section-title">Instructions</h2>
+                <p class="instructions-text">{{recipe.instructions}}</p>
+            </section>
+        </div>
+    </div>
+</main>
+{% endblock %}

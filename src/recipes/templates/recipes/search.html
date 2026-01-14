@@ -1,0 +1,56 @@
+{% extends 'recipes/base.html' %}
+
+{% block title %}Recipe App - Search{% endblock %}
+
+{% block content %}
+<div class="search-container">
+    <h2>Search Recipes</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="search-form">
+            {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">
+                    {{field.label}}
+                    {% if field.name == 'chart_type' %}
+                    <span class="tooltip-wrapper">
+                        <span class="info-icon">?</span>
+                        <span class="tooltip-text">
+                            <strong>Bar:</strong> Cooking time by recipe<br>
+                            <strong>Pie:</strong> Difficulty distribution<br>
+                            <strong>Line:</strong> Cooking time vs ingredient count
+                        </span>
+                    </span>
+                    {% endif %}
+                </label>
+                {{field}}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a href="{% url 'recipes:search' %}" class="btn btn-secondary">Clear Form</a>
+        </div>
+    </form>
+</div>
+
+{% if recipes_df %}
+<div class="results-container">
+    <h3>Search Results</h3>
+    {{recipes_df|safe}}
+
+    {% if chart %}
+    <div class="chart-container">
+        <h3>Data Visualization</h3>
+        <img src="data:image/png;base64,{{chart}}" alt="Recipe Chart">
+    </div>
+    {% endif %}
+</div>
+
+{% elif request.method == 'POST' %}
+<div class="results-container">
+    <p>No recipe found matching your search</p>
+</div>
+{% endif %}
+{% endblock %}
