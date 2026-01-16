@@ -40,7 +40,7 @@ def get_chart(chart_type, data, **kwargs):
         plt.title('Cooking Time vs Number of Ingredients')
 
     else:
-        print('Unkown chart type')
+        print('Unknown chart type')
         return None
     
     plt.tight_layout()
