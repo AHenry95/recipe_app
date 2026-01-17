@@ -19,7 +19,7 @@
         <a href="{% url 'recipes:list' %}">All Recipes</a>
         <a href="{% url 'recipes:search' %}">Search</a>
         {% if user.is_authenticated %}
-            <span class="'nav-greeting">Hello {{ user.username }}!</span>
+            <span class="nav-greeting">Hello {{ user.username }}!</span>
             <a href="{% url 'logout' %}">Logout</a>
         {% else %}
             <a href="{% url 'login' %}">Login</a>
