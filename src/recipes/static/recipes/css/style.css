@@ -770,3 +770,226 @@ footer {
     visibility: visible;
     opacity: 1;
 }
+
+/* Add Recipe Form */
+.form-container {
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.form-container h2 {
+    color: #2d6a4f;
+    margin-bottom: 1.5rem;
+    font-size: 1.8 rem;
+}
+
+.field-error {
+    color: #b91c1c;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+/* Profile Page */
+.profile-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.profile-header {
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile-header h2 {
+    color: #2d6a4f;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-section {
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.profile-section h3 {
+    color: #2d6a4f;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e8f5e9;
+}
+
+.empty-message {
+    color: #666;
+    text-align: center;
+    padding: 1rem;
+}
+
+.empty-message a {
+    color: #2d6a4f;
+    font-weight: 600;
+}
+
+/* Moda/ Styles */
+.author-actions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #FFF;
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #FFF;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #b91c1c;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content p {
+    line-height: 0.5rem;
+    color: #555;
+}
+
+.modal-content p strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #2d6a4f;
+    margin: 0.75rem 0;
+}
+
+.modal-content .delete-waring {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+button.btn-danger {
+    background-color: #b91c1c;
+    color: #FFF;
+    border: none;
+}
+
+button.btn-danger:hover {
+    background-color: #991b1b;
+}
+
+/* Favorite Button */
+.favorite-form {
+    margin-top: 1rem;
+}
+
+.favorite-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #e74c3c;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e74c3c;
+    transition: all 0.2s ease;
+}
+
+.favorite-btn:hover {
+    background-color: #fdf2f2;
+}
+
+.favorite-btn.favorited {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.favorite-btn.favorited:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+/* Recipe Header Row */
+.recipe-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.favorite-form {
+    margin: 0;
+}
+
+/* Signup Form */
+.signup-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.signup-form input:focus {
+    outline: none;
+    border-color: #2d6a4f;
+    box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+}
+
+.signup-form .help-text {
+    display: block;
+    color: #888;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.login-footer p {
+    margin-bottom: 0.5rem;
+}
