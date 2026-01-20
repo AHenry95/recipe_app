@@ -1,0 +1,37 @@
+{% extends 'recipes/base.html' %}
+
+{% block title %}
+    {% if object %}Edit Recipe{% else %}Add Recipe{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{% if object %}Edit Recipe{% else %}Add a New Recipe{% endif %}</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="recipe-form">
+            {% for field in form %}
+            <div class="form-group">
+                <label for="{{field.id_for_label}}">{{field.label}}</label>
+                {{field}}
+                {% if field.errors %}
+                <div class="field-error">{{field.errors}}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">
+                {% if object %}Update Recipe{% else %}Add Recipe{% endif %}
+            </button>
+            <a 
+                href="{% if object %}{{object.get_absolute_url}}{% else %}{% url 'recipes:list' %}{% endif %}" 
+                class="btn btn-secondary"
+            >
+                Cancel
+            </a>
+        </div>
+    </form>
+</div>
+{% endblock %}

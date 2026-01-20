@@ -1,0 +1,40 @@
+{% extends 'recipes/base.html' %}
+
+{% block title %}{{user.username}}{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="profile-header">
+        <h2>{{user.username}}</h2>
+    </div>
+
+    <section class="profile-section">
+        <h3>My Recipes</h3>
+        {% if authored_recipes %}
+        <div class="recipes-grid">
+            {% for recipe in authored_recipes %}
+                {% include 'recipes/_recipe_card.html' %}
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="empty-message">You haven't added any recipes yet. <a href="{% url 'recipes:add' %}">Add one!</a></p>
+        {% endif %}
+    </section>
+
+    <section class="profile-section">
+        <h3>Favorite Recipes</h3>
+        {% if favorite_recipes %}
+        <div class="recipes-grid">
+            {% for recipe in favorite_recipes %}
+                {% include 'recipes/_recipe_card.html' %}
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="empty-message">
+            You haven't added any favorite recipes yet. 
+            <a href="{% url 'recipes:list' %}">Check out our great recipes!</a>
+        </p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

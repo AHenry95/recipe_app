@@ -1,0 +1,12 @@
+<a href="{{recipe.get_absolute_url}}" class="recipe-card">
+    <img src="{{recipe.pic.url}}" alf="{{recipe.name}}" class="recipe-image">
+    <div class="recipe-info">
+        <h3 class="recipe-name">{{recipe.name}}</h3>
+        <div class="recipe-meta">
+            <span>⏱ {{recipe.cooking_time}}</span>
+            <span class="difficulty-badge difficulty-{{recipe.difficulty|lower}}">
+                {{recipe.difficulty}}
+            </span>
+        </div>
+    </div>
+</a>
