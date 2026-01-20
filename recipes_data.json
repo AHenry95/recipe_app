@@ -1,0 +1,212 @@
+[
+{
+  "model": "recipes.recipe",
+  "pk": 1,
+  "fields": {
+    "name": "Coffee",
+    "author": null,
+    "ingredients": "ground coffee,\r\nhot water,\r\nhalf and half",
+    "cooking_time": 5,
+    "difficulty": "Easy",
+    "instructions": "Place ground coffee in paper filter and pour hot water over grounds. Mix black coffee with half and half.",
+    "pic": "recipes/coffee.jpg",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 2,
+  "fields": {
+    "name": "Buttered Toast",
+    "author": null,
+    "ingredients": "bread, butter",
+    "cooking_time": 3,
+    "difficulty": "Easy",
+    "instructions": "Toast bread until golden brown. Spread butter even on warm toast",
+    "pic": "recipes/toast.jpg",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 3,
+  "fields": {
+    "name": "Fresh Salsa",
+    "author": null,
+    "ingredients": "tomatoes, onion, jalapeño, lime juice, salt, cilanto",
+    "cooking_time": 8,
+    "difficulty": "Medium",
+    "instructions": "Finely dice tomatoes and onion. Remove seeds from and mince jalapeño. Roughly chop cilantro. Combine all ingredients in bowl and mix well. Let sit 5 minutes before serving.",
+    "pic": "recipes/salsa.jpg",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 4,
+  "fields": {
+    "name": "Soft Boiled Eggs",
+    "author": null,
+    "ingredients": "eggs, water, salt",
+    "cooking_time": 12,
+    "difficulty": "Intermediate",
+    "instructions": "Bring water to a boil, gently lower eggs into water and cook for 6-7 minutes. Transfer eggs to an ice bath for 2 minutes. Peel carefully and season with salt.",
+    "pic": "recipes/soft_boiled_eggs.jpg",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 5,
+  "fields": {
+    "name": "Spaghetti Bolognese",
+    "author": null,
+    "ingredients": "spaghetti, ground beef, onion, garlic, canned tomatoes, tomato paste, olive oil, oregano, basil, salt, pepper, parmesen",
+    "cooking_time": 45,
+    "difficulty": "Hard",
+    "instructions": "Sauté onion and garlic in olive oil. Brown ground beef and drain fat. Add tomatoes, tomato paste, and herbs to ground beef. Simmer for 30 minutes. Cook spaghetti according to package directions. Serve sauce over over pasta and top with grated parmesan.",
+    "pic": "recipes/spaghetti.jpg",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 6,
+  "fields": {
+    "name": "Garlic Butter Shrimp Pasta",
+    "author": null,
+    "ingredients": "linguine, shrimp, garlic, butter, olive oil, white wine, lemon juice, red pepper flakes, parsley, parmesan cheese, salt, black pepper",
+    "cooking_time": 25,
+    "difficulty": "Hard",
+    "instructions": "Cook pasta according to package directions (reserving 1 cup of pasta water). While pasta cooks prepare shrimp (peel/devein if needed, pat dry, season with salt and pepper. Coat the bottom of a large skillet with olive oil and heat on medium high heat, cook shrimp on both sides until pink (about 2 minutes per side). Remove shrimp from skillet. Reduce heat to medium and add butter. Once melted add minced garlic and red pepper flakes, cook until fragrant (about 30 seconds). Pour in white wine and lemon juice and let reduce slightly (about 2 minutes). Add cooked shrimp and drained pasta to skillet and remove from heat. Mix to incorporate all ingredients, adding reserved pasta water to keep sauce silky, add needed. Top with freshly grated parmesan, black pepper, and chopped parsley.",
+    "pic": "recipes/shrimp_pasta.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 7,
+  "fields": {
+    "name": "Caprese Salad",
+    "author": null,
+    "ingredients": "fresh mozzarella, tomato, basil, olive oil",
+    "cooking_time": 5,
+    "difficulty": "Medium",
+    "instructions": "Slice mozzarella and tomato into equal size rounds. On a plate create a ring of alternating slices of tomatoes and mozzarella, and fill in the middle of the circle with similar alternating slices. Top with basil leaves and a drizzle of olive oil.",
+    "pic": "recipes/caprese.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 8,
+  "fields": {
+    "name": "Avacado Toast with Egg",
+    "author": null,
+    "ingredients": "Avocado, Bread, Egg, Salt, Pepper",
+    "cooking_time": 8,
+    "difficulty": "Medium",
+    "instructions": "Toast bread until crispy. While bread is toasting, prepare egg to your preference. Extract avocado and remove pit, then mash with fork. Add salt, black pepper, and other seasonings of your preference to avocado mash. Spread avocado mash on top of toast, top with egg, then top with pinch of salt.",
+    "pic": "recipes/avocado_toast.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 9,
+  "fields": {
+    "name": "Greek Yogurt Parfait",
+    "author": null,
+    "ingredients": "Greek Yogurt, Granola, Honey, Blueberries, Strwberries",
+    "cooking_time": 5,
+    "difficulty": "Medium",
+    "instructions": "Spoon Greek Yogurt into a bowl. Add layer of mixed berries, then sprinkle granola on top. Repeat the previous step one more to create an additional layer. Drizzle honey on top.",
+    "pic": "recipes/parfait.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 10,
+  "fields": {
+    "name": "Chicken Stir Fry",
+    "author": null,
+    "ingredients": "Chicken Breast, Broccoli, Bell Pepper, Soy Sauce, Garlic, Ginger, Sesame Oil, Cornstarch, Vegetable Oil, Rice",
+    "cooking_time": 30,
+    "difficulty": "Hard",
+    "instructions": "Slice chicken into thin strips and toss with cornstarch. Cook rice according to package directions. Heat vegetable oil in wok (or large skillet). Stir fry chicken until golden brown, then remove from pan. Add more oil and stir fry broccoli and bell pepper for 3-4 minutes. Add minced garlic and ginger, cooking for 30 seconds. Return chicken to pan, add soy sauce and sesame oil, and too everything together. Serve over rice.",
+    "pic": "recipes/stir_fry.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 11,
+  "fields": {
+    "name": "Tomato Basil Soup",
+    "author": null,
+    "ingredients": "Canned Tomatoes, Vegetable Broth, Onion, Garlic, Fresh Basil, Olive Oil, Heavy Cream, Salt, Black Pepper",
+    "cooking_time": 35,
+    "difficulty": "Hard",
+    "instructions": "Heat olive oil in a large pot over medium heat. Sauté diced onion until softened, about 5 minutes. add minced garlic and cook for another minute. Pour in canned tomatoes and vegetable broth, then bring to a simmer. Let simmer for 20 minutes, then remove from heat. Add fresh basil and blend until smooth using an immersion blender. Stir in heavy cream and season with salt and pepper.",
+    "pic": "recipes/tomato_soup.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 12,
+  "fields": {
+    "name": "Bruschetta",
+    "author": null,
+    "ingredients": "Baguette, Tomatoes, Garlic, Fresh Basil, Olive Oil, Balsamic Vinegar, Salt",
+    "cooking_time": 8,
+    "difficulty": "Medium",
+    "instructions": "Slice baguette into 1/2 inch rounds and toast until golden. Dice tomatoes and combined with minced garlic, chopped basil, and a splash of balsamic vinegar. Season with salt and let sit for a few minutes. Spoon tomato mixture on top of baguette rounds.",
+    "pic": "recipes/bruschetta.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 13,
+  "fields": {
+    "name": "Baked Sweet Potato",
+    "author": null,
+    "ingredients": "Sweet Potato, Butter, Salt",
+    "cooking_time": 50,
+    "difficulty": "Intermediate",
+    "instructions": "Preheat oven to 400F. Wash sweet potato and pierce skin several times with a fork. Place on a baking sheet and bake for 45-50 minutes (until tender when pierced with a knife). Remove from oven and slice open length-wise. Fluff the inside with a fork, add butter, and season with salt.",
+    "pic": "recipes/sweet_potato.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 14,
+  "fields": {
+    "name": "Shepherd's Pie",
+    "author": null,
+    "ingredients": "Ground Lamb, Potatoes, Carrots, Peas, Onion, Garlic, Tomato Paste, Beef Broth, Butter, Milk, Rosemary, Salt, Black Pepper",
+    "cooking_time": 60,
+    "difficulty": "Hard",
+    "instructions": "Peel and cube potatoes, then boil until tender. Drain and mash potatoes, then mix with milk and butter, and season with salt. While potatoes are boiling, brown ground lamb in a large, oven-safe skillet. Add diced onion and carrots to the skillet and cook until softened. Stir minced garlic, tomato paste, rosemary, and beef broth in to the lamb mixture. Simmer and reduce for 10 minutes. Add peas to the mixture, and then top with even layer of mashed potatoes. Bake at 400F for 20 minutes until golen brown on top.",
+    "pic": "recipes/shepherds_pie.png",
+    "favorited_by": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 15,
+  "fields": {
+    "name": "Baked Mac and Cheese",
+    "author": null,
+    "ingredients": "Elbow Macaroni, Sharp Cheddar Cheese, Gruyère Cheese, Whole Milk, Butter, Breadcrumbs, Thyme, Flour, Black Pepper, Salt",
+    "cooking_time": 40,
+    "difficulty": "Hard",
+    "instructions": "Cook macaroni according to package directions and drain once finished. Melt butter in a large pot, and once melted mix with flour until combined in a paste like texture. Add milk in batches, adding more milk once the previous batch has fully incorporated into the mixture until a smooth sauce forms. Add shredded cheese in batches to the sauce, adding more as the previous match melts. Add drained pasta to the skillet to mix with sauce. Add combined pasta and sauce mixture to a baking dish and top with breadcrumbs and thyme. Bake at 375F for 25 minutes, or until breadcrumb topping is golden brown.",
+    "pic": "recipes/max_cheese.png",
+    "favorited_by": []
+  }
+}
+]
